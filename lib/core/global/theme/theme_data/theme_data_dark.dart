@@ -8,7 +8,13 @@ ThemeData getThemeDataDark() => ThemeData(
     primaryColor: AppColorsDark.pomegranate,
     disabledColor: AppColorsDark.alto,
     primaryColorLight: AppColorsDark.white,
+    hintColor: AppColorsDark.silver,
     bottomNavigationBarTheme:
         const BottomNavigationBarThemeData(backgroundColor: AppColorsDark.dark),
     fontFamily: GoogleFonts.lato().fontFamily,
-    textTheme: TextTheme(headline5: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.w400)));
+    textTheme: TextTheme(
+      headline5: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.w400),
+      bodyText2: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400),
+      subtitle1: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w400),
+      overline: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.w400),
+    ));
