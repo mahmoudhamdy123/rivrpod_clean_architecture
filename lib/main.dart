@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:riverpod_clean_architecture/core/global/theme/theme_data/theme_data_dark.dart';
 import 'package:riverpod_clean_architecture/core/utils/app_string.dart';
 import 'package:riverpod_clean_architecture/feature/main_layout/presentation/screens/main_layout_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
