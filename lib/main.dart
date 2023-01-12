@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:riverpod_clean_architecture/core/global/theme/theme_data/theme_data_dark.dart';
 import 'package:riverpod_clean_architecture/core/utils/app_string.dart';
 import 'package:riverpod_clean_architecture/feature/main_layout/presentation/screens/main_layout_screen.dart';
+import 'package:riverpod_clean_architecture/feature/rivrpod_example/example.dart';
 import 'package:riverpod_clean_architecture/feature/rivrpod_example/hello_world_screen.dart';
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: getThemeDataDark(),
             // home: const MainLayoutScreen(),
-            home: const HelloWorldScreen(),
+            home: const Example(),
           );
         });
   }
