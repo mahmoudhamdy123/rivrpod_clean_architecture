@@ -5,14 +5,18 @@ import 'package:riverpod_clean_architecture/core/global/theme/theme_data/theme_d
 import 'package:riverpod_clean_architecture/core/utils/app_string.dart';
 import 'package:riverpod_clean_architecture/feature/main_layout/presentation/screens/main_layout_screen.dart';
 import 'package:riverpod_clean_architecture/feature/rivrpod_example/example.dart';
-import 'package:riverpod_clean_architecture/feature/rivrpod_example/example_1/home_page.dart';
+import 'package:riverpod_clean_architecture/feature/rivrpod_example/example_2/home_page_example_2.dart';
 import 'package:riverpod_clean_architecture/feature/rivrpod_example/hello_world_screen.dart';
+
+import 'feature/rivrpod_example/example_1/home_page_example_1.dart';
 
 void main() {
   //Main project
   // runApp(const ProviderScope(child: MyApp()));
   //Example 1
-  runApp(const ProviderScope(child: Example1()));
+  //runApp(const ProviderScope(child: Example1()));
+  //Example 2
+  runApp(const ProviderScope(child: Example2()));
 }
 
 class MyApp extends StatelessWidget {
@@ -42,19 +46,29 @@ class Example1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-        designSize: const Size(451, 978),
-        minTextAdapt: true,
-        splitScreenMode: true,
-        builder: (context, child) {
-          return MaterialApp(
-            title: "Example 1",
-            debugShowCheckedModeBanner: false,
-            darkTheme: ThemeData.dark(),
-            themeMode: ThemeMode.dark,
-            home: const HomePageExample1(),
-            // home: const Example(),
-          );
-        });
+    return MaterialApp(
+      title: "Example 1",
+      debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.dark,
+      home: const HomePageExample1(),
+      // home: const Example(),
+    );
+  }
+}
+
+class Example2 extends StatelessWidget {
+  const Example2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Example 1",
+      debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.dark,
+      home: const HomePageExample2(),
+      // home: const Example(),
+    );
   }
 }
