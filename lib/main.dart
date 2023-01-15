@@ -5,10 +5,14 @@ import 'package:riverpod_clean_architecture/core/global/theme/theme_data/theme_d
 import 'package:riverpod_clean_architecture/core/utils/app_string.dart';
 import 'package:riverpod_clean_architecture/feature/main_layout/presentation/screens/main_layout_screen.dart';
 import 'package:riverpod_clean_architecture/feature/rivrpod_example/example.dart';
+import 'package:riverpod_clean_architecture/feature/rivrpod_example/example_1/home_page.dart';
 import 'package:riverpod_clean_architecture/feature/rivrpod_example/hello_world_screen.dart';
 
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  //Main project
+  // runApp(const ProviderScope(child: MyApp()));
+  //Example 1
+  runApp(const ProviderScope(child: Example1()));
 }
 
 class MyApp extends StatelessWidget {
@@ -26,8 +30,30 @@ class MyApp extends StatelessWidget {
             title: AppString.appName,
             debugShowCheckedModeBanner: false,
             theme: getThemeDataDark(),
-            // home: const MainLayoutScreen(),
-            home: const Example(),
+            home: const MainLayoutScreen(),
+            // home: const Example(),
+          );
+        });
+  }
+}
+
+class Example1 extends StatelessWidget {
+  const Example1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ScreenUtilInit(
+        designSize: const Size(451, 978),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, child) {
+          return MaterialApp(
+            title: "Example 1",
+            debugShowCheckedModeBanner: false,
+            darkTheme: ThemeData.dark(),
+            themeMode: ThemeMode.dark,
+            home: const HomePageExample1(),
+            // home: const Example(),
           );
         });
   }
