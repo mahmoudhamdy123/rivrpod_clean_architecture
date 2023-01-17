@@ -4,10 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:riverpod_clean_architecture/core/global/theme/theme_data/theme_data_dark.dart';
 import 'package:riverpod_clean_architecture/core/utils/app_string.dart';
 import 'package:riverpod_clean_architecture/feature/main_layout/presentation/screens/main_layout_screen.dart';
-import 'package:riverpod_clean_architecture/feature/rivrpod_example/example.dart';
+
 import 'package:riverpod_clean_architecture/feature/rivrpod_example/example_2/home_page_example_2.dart';
 import 'package:riverpod_clean_architecture/feature/rivrpod_example/example_3/home_page_example_3.dart';
 import 'package:riverpod_clean_architecture/feature/rivrpod_example/example_4/home_page_example_4.dart';
+import 'package:riverpod_clean_architecture/feature/rivrpod_example/example_5/home_page_example_5.dart';
 
 import 'feature/rivrpod_example/example_1/home_page_example_1.dart';
 
@@ -21,7 +22,9 @@ void main() {
   //Example 3
   // runApp(const ProviderScope(child: Example3()));
   //Example 4
-  runApp(const ProviderScope(child: Example4()));
+  // runApp(const ProviderScope(child: Example4()));
+  //Example 5
+  runApp(const ProviderScope(child: Example5()));
 }
 
 class MyApp extends StatelessWidget {
@@ -105,6 +108,22 @@ class Example4 extends StatelessWidget {
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
       home: const HomePageExample4(),
+      // home: const Example(),
+    );
+  }
+}
+
+class Example5 extends StatelessWidget {
+  const Example5({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Example 1",
+      debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.dark,
+      home: const HomePageExample5(),
       // home: const Example(),
     );
   }
