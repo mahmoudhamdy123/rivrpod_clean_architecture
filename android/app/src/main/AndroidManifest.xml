@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.flutterApp.movies.riverpod_clean_architecture">
+   <queries>
+       <provider android:authorities="com.facebook.katana.provider.PlatformProvider" />
+   </queries>
    <application
         android:label="riverpod_clean_architecture"
         android:name="${applicationName}"
